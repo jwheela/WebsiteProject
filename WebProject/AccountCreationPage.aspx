@@ -26,7 +26,7 @@
 
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"><h5 style="font-family:Castellar;">Create your Password</h5>
+            <div class="col-sm-4"><h5 style="font-family:Castellar;">Create your PassWord</h5>
                 <asp:TextBox ID="tboxPasswordCreate" runat="server" TextMode="Password"></asp:TextBox></div>
             <div class="col-sm-4"></div>
         </div>
