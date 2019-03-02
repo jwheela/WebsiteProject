@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebProject.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>RuneScrape.com</title>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/customstyles.css" rel="stylesheet" />
+    <style type="text/css">
+        
+    </style>
+</head>
+
+
+
+
+<body style="background-color: black">
+
+    <form id="form2" runat="server" class="container-fluid" style="background-image: url(/images/space01.jpg); background-repeat: no-repeat; background-size: cover; height: 1400px;">
+        <nav class="navbar align-content-center" style="background-color: maroon; background-repeat: no-repeat; background-size: cover; width: 100%; border: double; border-color: gray">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-nav" style="text-align: center">
+                        <h1 style="font-family:Castellar">RUNESCRAPE</h1>
+                    </a>
+                </div>
+
+                <%-- You can dynamically add the active class to whichever element is active. 
+                        You can either do this as your page is rendered. --%>
+                <ul class="nav navbar-nav" style="align-content: center">
+                    <li class="active"><a href="Homepage.aspx">
+                        <h5 style="font-family:Castellar; color:black">Home</h5>
+                    </a></li>
+                </ul>
+
+                <ul class="nav navbar-nav" style="align-content: center">
+                    <li><a href="PreOrderPage.aspx">
+                        <h5 style="font-family:Castellar; color:black">Pre-Order</h5>
+                    </a></li>
+                </ul>
+
+                <ul class="nav navbar-nav" style="align-content: center">
+                    <li><a href="News.aspx">
+                        <h5 style="font-family:Castellar; color:black">News</h5>
+                    </a></li>
+                </ul>
+
+                <ul class="nav navbar-nav" style="align-content: center">
+                    <li><a href="Gallery.aspx">
+                        <h5 style="font-family:Castellar; color:black">Gallery</h5>
+                    </a></li>
+                </ul>
+
+                <ul class="nav navbar-nav" style="align-content: center">
+                    <li><a href="SupportPage.aspx">
+                        <h5 style="font-family:Castellar; color:black">Support</h5>
+                    </a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <asp:LinkButton ID="CreateAccount" runat="server" OnClick="CreateAccount_click" ForeColor="Black">Create Account</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="LogIn" runat="server" OnClick="LogIn_Click" ForeColor="Black">Log In</asp:LinkButton></li>
+                    <asp:Label ID="lblUserIsLoggedIn" runat="server" Text="" ForeColor="White"></asp:Label>
+                    <asp:LinkButton ID="LogOut" runat="server" OnClick="LogOut_Click">Log Out</asp:LinkButton>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <h1>This is where the content of other pages will go</h1>
+        </asp:ContentPlaceHolder>
+    </form>
+
+
+
+    <div id="footer" class="rounded" style="background-color: black; color: ghostwhite">
+        <h4>Runescrape LLC.
+            <asp:Label ID="lblYear" runat="server"></asp:Label></h4>
+    </div>
+</body>
+
+
+
+</html>
